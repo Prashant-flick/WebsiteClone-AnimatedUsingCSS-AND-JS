@@ -1,0 +1,545 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'montserrat';
+    color: #fff;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+#nav{
+    position: fixed;
+    display: flex;
+    height: 140px;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 100px 0 120px;
+    gap: 50px;
+    z-index: 999;
+}
+
+#nav img{
+    height: 75px;
+}
+
+#nav h4{
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/*----------------------cursor--------------------------------*/
+#cursor{
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background-color: #95C11E;
+    position: fixed;
+    z-index: 99;
+}
+
+#cursor-hover{
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+    background-color: transparent;
+    border-color: #95C11E;
+    position: fixed;
+    z-index: 99;
+}
+
+#cursor-blur{
+    height: 400px;
+    width: 400px;
+    border-radius: 400px;
+    background-color: #96c11e47;
+    filter: blur(50px);
+    position: fixed;
+    z-index: 9;
+}
+
+video{
+    position: fixed;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+/* ------------------------------main----------------------------------*/
+/* ---------------------------first page------------------------------- */
+#main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.393);
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    z-index: 10;
+}
+
+#page1 h1{
+    font-size: 100px;
+    font-weight: 900;
+    /* text-shadow: 5px 5px black; */
+    /* alternate way */
+    position: relative;
+}
+
+#page1 h1::before{
+    content: 'EAT. DRINK. PLAY.';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    color: black;
+    -webkit-text-stroke: 2px #95C11E;
+    z-index: -1;
+}
+
+#page1 h2{
+    font-size: 25px;
+    font-weight: 700;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+#page1 h3{
+    font-size: 16px;
+    font-weight: 500;
+    width: 45%;
+}
+
+/*--------------------------second page--------------------------------*/
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+}
+
+/* #scroller-marquee{
+    font-size: 90px;
+    text-transform: uppercase;
+    font-weight: 900;
+    -webkit-text-stroke: 2px #95C11E;
+    color: black;
+} */
+
+#scroller{
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 100;
+}
+
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+
+#scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroller h4 {
+    display: inline-block;
+    font-size: 100px;
+    font-weight: 900;
+    /* font-family: gilroy; */
+    text-transform: uppercase;
+    margin-right: 20px;
+    transition: all linear 0.3s;
+    color: #000;
+    -webkit-text-stroke: 2px #ffffff;
+}
+
+#scroller h4:hover {
+    color: #95c11e;
+    -webkit-text-stroke: 2px #95c11e;
+    
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+#about-us{
+    padding: 80px 120px;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+#about-us #img-1{
+    height: 20vh;
+    width: 20vh;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#about-us #img-2{
+    height: 26vh;
+    width: 20vh;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#about-us-in{
+    text-align: center;
+    width: 60%;
+}
+
+#about-us-in h1{
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 900;
+    padding-bottom: 30px;
+}
+
+#about-us-in #h3-first{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 2;
+    padding-bottom: 30px;
+}
+
+#about-us-in h3{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 2;
+}
+
+#about-nextpage{
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.about-nextpage-section{
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    height: 70%;
+    width: 26%;
+    border-radius: 10px;
+    z-index: 100;
+    transition: all ease 0.4s;
+}
+
+#about-nextpage #img-1{
+    background-image: url(img/home-toptracer.avif);
+}
+
+#about-nextpage #img-2{
+    background-image: url(img/hero-4.webp);
+}
+
+#about-nextpage #img-3{
+    background-image: url(img/home-lessons.avif);
+}
+
+.overlay{
+    text-align: center;
+    background-color: #95C11E;
+    height: 100%;
+    width: 90%;
+    border-radius: 10px;
+    padding: 20px;
+    padding-top: 100px;
+    opacity: 0;
+    transition: all ease 0.4s;
+}
+
+.overlay h1{
+    text-transform: uppercase;
+    color: black;
+    padding-bottom: 10px;
+}
+.overlay p{
+    color: black;
+}
+
+.about-nextpage-section:hover .overlay{
+    opacity: 1;
+}
+
+.about-nextpage-section:hover{
+    transform: rotate3d(1,1,0,10deg);
+}
+
+#greendiv{
+    margin-top: 20px;
+    display: flex;
+    background: linear-gradient(#3DAB30,#B0E523);
+    height: 35vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#greendiv img{
+    height: 100%;
+    object-fit: cover;
+    width: 12%;
+}
+
+#greendiv h3{
+    width: 40%;
+    font-size: 22px;
+    color: black;
+    font-weight: 900;
+}
+
+/*-----------------------------page3--------------------------------*/
+#page3{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+}
+
+#food-and-drink{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    height: 90vh;
+    width: 100%;
+}
+
+#food-and-drink img{
+    border-radius: 20px;
+    height: 63%;
+    width: 42%;
+    object-fit: cover;
+    padding-left: 20px;
+}
+
+#food-and-drink #food-details{
+    position: relative;
+    padding-right: 20px;
+    width: 35%;
+    z-index: 100;
+}
+
+#food-details h2{
+    font-size: 38px;
+    padding-bottom: 30px;
+}
+
+#food-details #p1{
+    font-size: 18px;
+    line-height: 1.5;
+    padding-bottom: 25px;
+}
+#food-details #p2{
+    font-size: 18px;
+    line-height: 1.5;
+    padding-bottom: 45px;
+}
+
+#food-details #coffee-button{
+    background-color: black;
+    border: 2px solid #95C11E;
+    border-radius: 30px;
+    width: 30%;
+    height: 50px;
+    z-index: 100;
+}
+
+#coffee-button button{
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 22px;
+    margin-top: 14.5px;
+    background-color: black;
+    border: none;
+}
+
+#coffee-button:hover button{
+    background-color: #95C11E;
+    color: black;
+}
+
+#page3 #paragraph{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    height: 40vh;
+    width: 100%;
+}
+
+#page3 #paragraph img{
+    height: 50px;
+}
+
+#paragraph #quote-left{
+    position: absolute;
+    left: 20%;
+    top: 0;
+}
+
+#paragraph #quote-right{
+    position: absolute;
+    right: 20%;
+    top: 60%;
+}
+
+#page3 #paragraph p{
+    padding-top: 70px;
+    width: 50%;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+/* -------------------------------last-page------------------------*/
+#page4{
+    height: 90vh;
+    width: 100%;
+}
+
+#selector{
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+#selector h1{
+    top: 8%;
+    position: absolute;
+    font-size: 76px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    -webkit-text-stroke: 2px white;
+    color: black;
+}
+
+#selector .elem{
+    position: relative;
+    height: 42%;
+    width: 26%;
+    background-color: #b1e621;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.elem h2{
+    font-size: 28px;
+    font-weight: 900;
+    color: black;
+    z-index: 1;
+    transition: all ease 0.5s;
+}
+
+.elem img{
+    scale: 1.1;
+    transition: all ease 0.5s;
+    border-radius: 20px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0;
+}
+
+.elem:hover img{
+    opacity: 1;
+    scale: 1;
+}
+
+.elem:hover h2{
+   color: white;
+}
+
+#page4 #footer{
+    /* position: relative; */
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(to left bottom, #119f3a 0%, #a3d421 80%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10vh;
+    z-index: 10;
+}
+
+#footer img{
+    position: relative;
+    padding-left: 18vh;
+    height: 100px;
+}
+
+#footer h3{
+    display: inline-block;
+    /* position: relative; */
+    font-size: 23px;
+    font-weight: 800;
+    color: #000;
+    line-height: 1.7;
+}
+
+#footer-dets-2{
+    width: 23%;
+    z-index: 100;
+}
+
+#footer-dets-1{
+    width: 23%;
+    z-index: 100;
+}
+
+#footer-address{
+    z-index: 100;
+}
+
+#footer-address p{
+    width: 40%;
+    color: black;
+    font-weight: 600;
+}
+
+
+
+
+
